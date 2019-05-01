@@ -1,1 +1,1 @@
-# DashboardApp
+# Dashboard App - AngularJS

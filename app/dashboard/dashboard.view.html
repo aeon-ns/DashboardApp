@@ -1,0 +1,19 @@
+<div class="dashboard" ng-cloak>
+	<section layout="row" flex>
+		<md-sidenav
+			class="md-sidenav-left side-menu"
+			md-component-id="left"
+			md-is-locked-open="$mdMedia('gt-md')"
+			ng-include="'app/dashboard/side-menu/side-menu.view.html'"
+		>
+		</md-sidenav>
+
+		<md-content flex layout-padding>
+			<div
+				class="dashboard-header"
+				ng-include="'app/dashboard/header/header.view.html'"
+			></div>
+			<div flex ui-view></div>
+		</md-content>
+	</section>
+</div>
