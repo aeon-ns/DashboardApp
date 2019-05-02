@@ -35,17 +35,19 @@
 	</div>
 	<div class="list-section">
 		<ul>
-			<li ng-class="{ 'active': menu.activeItem === item.title }" ng-repeat="item in menu.items">
-				<md-button ng-click="onMenuItemClick(item.title)">
+			<li ng-class="{ 'active': menu.activeItem.title === item.title }" ng-repeat="item in menu.items">
+				<md-button ng-click="onMenuItemClick(item)">
 					<i ng-if="item.listIcon" class="material-icons list-icon"
 						ng-bind="item.listIcon"></i>
 					{{ item.title }}
 					<i ng-if="item.listActionIcon" class="material-icons list-action-icon"
 						ng-bind="item.listActionIcon"></i>
 				</md-button>
-				<ul ng-if="item.subMenuItems" class="sub-list">
-					<li ng-repeat="subItem in item.subMenuItems">
-						<md-button>
+				<ul ng-if="item.subMenu && item.subMenu.items" class="sub-list"
+					ng-show="item.subMenu.show">
+					<li ng-repeat="subItem in item.subMenu.items"
+						ng-class="{ 'active': item.subMenu.activeItem.title === subItem.title }">
+						<md-button ng-click="onSubMenuItemClick(item, subItem)">
 							{{ subItem.title }}
 						</md-button>
 					</li>
