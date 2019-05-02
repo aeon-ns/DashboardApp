@@ -13,21 +13,21 @@ body {
     width: calc(100% - 2px);
     height: 47px;
     background-color: white;
-	border: 1px solid #f3f3f5;
+	border: 1px solid #f3f3f3;
 	border-left: none;
 }
 
 .side-menu {
-	border-right: 1px solid #f3f3f5;
+	border-right: 1px solid #f3f3f3;
 }
 
 .side-menu-content > div {
-	border-bottom: 1px solid #f3f3f5;
+	border-bottom: 1px solid #f3f3f3;
 }
 
 .side-menu .home {
 	width: 100%;
-    border-bottom: 1px solid #f3f3f5;
+    border-bottom: 1px solid #f3f3f3;
     background-color: white;
 }
 
@@ -128,6 +128,7 @@ body {
 	text-align: left;
 	text-transform: capitalize;
 	position: relative;
+	text-shadow: 0px 0px 1px lightgrey;
 }
 
 
@@ -157,5 +158,68 @@ body {
 	padding: 10px 0;
 }
 .list-section > ul > li:not(:last-child) {
-	border-bottom: 1px solid #f3f3f5;
+	border-bottom: 1px solid #f3f3f3;
+}
+
+.header-container {
+	box-sizing: border-box;
+	height: 100%;
+	width: 100%;
+}
+
+.view-title {
+	font-size: 18px;
+    vertical-align: middle;
+    display: inline-block;
+	padding: 10px;
+	text-shadow: 0px 0px 1px lightgrey;
+}
+
+.float-right {
+	float: right;
+}
+
+.primary-btn {
+	background-color: white;
+	border-radius: 3px;
+	border: 1px solid lightgrey;
+	margin: 0;
+	position: relative;
+	text-align: left;
+	padding: 0 8px;
+}
+
+.primary-btn-icon {
+	padding-right: 25px;
+}
+
+.primary-btn-icon i {
+	position: absolute;
+	right: 4px;
+	top: 50%;
+	transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	color: #9fa0a6;
+	font-size: 16px;
+}
+
+.dashboard-content {
+	padding: 20px !important;
+}
+
+.chart-container {
+	box-sizing: border-box;
+	padding: 10px;
+	background-color: white;
+	border-radius: 4px;
+	width: 100%;
+	border: 1px solid #f3f3f3;
+	box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.24)
+}
+
+.chart-container canvas {
+	width: 100% !important;
+	max-height: 300px !important;
 }
