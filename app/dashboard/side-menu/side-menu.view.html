@@ -6,25 +6,8 @@
 		</i>
 	</md-button>
 </div>
-<div class="avatar-section">
-	<div class="avatar">
-		<img ng-src="app/images/user-avatar.svg" />
-		<md-button class="md-icon-button" aria-label="More">
-			<i class="material-icons">
-				settings
-			</i>
-		</md-button>
-		<div class="user-name active">Full Name</div>
-		<div class="user-title">Title</div>
-	</div>
-</div> -->
-
-<!-- <md-sidenav
-	class="md-sidenav-left"
-	md-component-id="left"
-	md-is-locked-open="$mdMedia('gt-md')"
-> -->
-<md-toolbar class="">
+ -->
+<md-toolbar class="home">
 	<h1 class="md-toolbar-tools">
 		<md-button>
 			<md-tooltip md-direction="bottom">Dashboard</md-tooltip>
@@ -34,13 +17,42 @@
 		</md-button>
 	</h1>
 </md-toolbar>
-<md-content layout-padding>
+<md-content class="side-menu-content">
 	<md-button class="md-primary" hide-gt-md>
 		Close Sidenav Left
 	</md-button>
+	<div class="avatar-section" hide show-gt-md>
+		<div class="avatar">
+			<img ng-src="app/images/user-avatar.svg" />
+			<md-button class="md-icon-button" aria-label="More">
+				<i class="material-icons">
+					settings
+				</i>
+			</md-button>
+			<div class="user-name active">Full Name</div>
+			<div class="user-title">Title</div>
+		</div>
+	</div>
+	<div class="list-section">
+		<ul>
+			<li ng-class="{ 'active': menu.activeItem === item.title }" ng-repeat="item in menu.items">
+				<md-button ng-click="onMenuItemClick(item.title)">
+					<i ng-if="item.listIcon" class="material-icons list-icon"
+						ng-bind="item.listIcon"></i>
+					{{ item.title }}
+					<i ng-if="item.listActionIcon" class="material-icons list-action-icon"
+						ng-bind="item.listActionIcon"></i>
+				</md-button>
+				<ul ng-if="item.subMenuItems" class="sub-list">
+					<li ng-repeat="subItem in item.subMenuItems">
+						<md-button>
+							{{ subItem.title }}
+						</md-button>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
 	<p hide show-gt-md>
-		This sidenav is locked open on your device. To go back to the default
-		behavior, narrow your display.
 	</p>
 </md-content>
-<!-- </md-sidenav> -->

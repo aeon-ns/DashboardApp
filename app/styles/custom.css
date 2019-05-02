@@ -13,20 +13,26 @@ body {
     width: calc(100% - 2px);
     height: 47px;
     background-color: white;
-    border: 1px solid #f3f3f5;
+	border: 1px solid #f3f3f5;
+	border-left: none;
 }
 
-.dashboard-header .home {
-	width: 300px;
+.side-menu {
+	border-right: 1px solid #f3f3f5;
+}
+
+.side-menu-content > div {
+	border-bottom: 1px solid #f3f3f5;
 }
 
 .side-menu .home {
 	width: 100%;
-	height: 56px;
+    border-bottom: 1px solid #f3f3f5;
+    background-color: white;
 }
 
-.side-menu > div {
-	border-bottom: 1px solid #f3f3f5;
+.side-menu .home h1 {
+	padding: 0;
 }
 
 .side-menu .home .md-button {
@@ -104,4 +110,52 @@ body {
 .dashboard > section {
     width: 100%;
     height: 100%;
+}
+
+.list-section {
+	padding: 30px;
+}
+
+.list-section ul {
+	margin: 0;
+	padding: 0;
+}
+
+.list-section ul > li > button {
+	margin: 0;
+	width: 100%;
+	padding: 0 20px 0 40px;
+	text-align: left;
+	text-transform: capitalize;
+	position: relative;
+}
+
+
+.list-section ul > li > button i.list-icon {
+	position: absolute;
+	left: 8px;
+	top: 6px;
+	color: #9fa0a6;
+}
+
+.list-section ul > li > button i.list-action-icon {
+	position: absolute;
+	top: 6px;
+	right: 8px;
+	color: #9fa0a6;
+}
+
+.list-section ul > li.active > button i, .list-section ul.sub-list > li.active button {
+	color: #4100CE;
+}
+
+.list-section ul.sub-list > li button {
+	color: #9fa0a6;
+}
+
+.list-section > ul > li {
+	padding: 10px 0;
+}
+.list-section > ul > li:not(:last-child) {
+	border-bottom: 1px solid #f3f3f5;
 }
