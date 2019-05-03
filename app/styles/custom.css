@@ -211,12 +211,19 @@ body {
 
 .chart-container {
 	box-sizing: border-box;
-	padding: 10px;
+	padding: 20px;
 	background-color: white;
 	border-radius: 4px;
 	width: 100%;
 	border: 1px solid #f3f3f3;
-	box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.24)
+	box-shadow: 0px 0px 8px #f3f3f3;
+}
+
+.chart-container .chart-heading {
+	width: 100%;
+	border-bottom: 1px solid #f3f3f3;
+	margin: -20px -20px 20px;
+	padding: 20px;
 }
 
 .chart-container canvas {
