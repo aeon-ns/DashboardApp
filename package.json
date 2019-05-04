@@ -1,21 +1,26 @@
 {
-  "name": "cutshortassignment",
-  "version": "1.0.0",
-  "description": "sample dashboard",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+	"name": "cutshortassignment",
+	"version": "1.0.0",
+	"description": "sample dashboard",
+	"main": "index.js",
+	"scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+	},
   "author": "Nisheet Sharma <nisheet.sharma@live.in>",
-  "license": "ISC",
-  "dependencies": {
-    "angular": "^1.7.8",
-    "angular-animate": "^1.7.8",
-    "angular-aria": "^1.7.8",
-    "angular-material": "^1.1.18",
-    "angular-messages": "^1.7.8",
-    "angular-sanitize": "^1.7.8",
-    "angular-ui-router": "^1.0.22",
-    "jquery": "^3.4.0"
-  }
+	"license": "ISC",
+	"dependencies": {
+		"angular": "^1.7.8",
+		"angular-animate": "^1.7.8",
+		"angular-aria": "^1.7.8",
+		"angular-material": "^1.1.18",
+		"angular-messages": "^1.7.8",
+		"angular-sanitize": "^1.7.8",
+		"angular-ui-router": "^1.0.22",
+		"jquery": "^3.4.0"
+	},
+	"devDependencies": {
+		"express": "^4.16.4",
+		"morgan": "^1.9.1"
+	}
 }
