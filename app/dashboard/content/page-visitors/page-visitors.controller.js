@@ -4,7 +4,7 @@
 
         let days = [];
         let views = [];
-        for (let i = 0; i < 30; i++) {
+        for (let i = 0; i < 31; i++) {
             days[i] = i + 1;
             views[i] = Math.floor(1000 + Math.random() * 9000);
         }
