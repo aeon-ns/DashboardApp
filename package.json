@@ -25,7 +25,9 @@
 		"angular-messages": "^1.7.8",
 		"angular-sanitize": "^1.7.8",
 		"angular-ui-router": "^1.0.22",
-		"jquery": "^3.4.0",
+		"highcharts": "^7.1.1",
+		"jquery": "^3.4.1",
+		"odometer": "^0.4.8",
 		"express": "^4.16.4",
 		"morgan": "^1.9.1"
 	},
